@@ -11,48 +11,48 @@ export function manyElement(target) {
 	return document.body.querySelectorAll(target);
 }
 export async function getHeaderData() {
-	const action = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const action = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const head = await action.json();
 	const icons = head.Header;
 	return icons;
 }
 export async function textHeader() {
-	const main = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const main = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const firstNave = await main.json();
 	return [firstNave.centerNavigation, firstNave.newCenterNavigation];
 }
 export async function subNavData() {
-	const makeSome = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const makeSome = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const start = await makeSome.json();
 	return start.subHeader;
 }
 export async function lotData() {
-	const pount = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const pount = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const usePoint = await pount.json();
 	return usePoint.infinite;
 }
 export async function mobileSize() {
-	const m = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const m = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const mob = await m.json();
 	return mob.mobileData;
 }
 export async function searchTitle() {
-	const data = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const data = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const get = await data.json();
 	return get.newNavigation.parentNewNav;
 }
 export async function datesStack() {
-	const mainData = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const mainData = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const use = await mainData.json();
 	return use.dates;
 }
 export async function searchContent() {
-	const data = await fetch("https://airbnb-project-uudk.onrender.com/Place.json");
+	const data = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
 	const get = await data.json();
 	return get.newNavigation.childNewNav;
 }
 export async function Languages() {
-	const leng = await fetch("https://airbnb-project-uudk.onrender.com/language.json");
+	const leng = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/language.json");
 	const use = await leng.json();
 	return use.language;
 }
