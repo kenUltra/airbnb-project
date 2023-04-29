@@ -1,6 +1,5 @@
 {
   "name": "airbnb-me",
-  "homepage": "https://kenUltra.github.io/airbnb-project",
   "version": "0.1.5",
   "private": true,
   "email": "uchihatiana@gmail.com",
@@ -17,8 +16,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy":"npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }

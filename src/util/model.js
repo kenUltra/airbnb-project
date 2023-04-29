@@ -1,3 +1,7 @@
+import { contentData as data } from './actions';
+const locationLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-location";
+const languageLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-lang"; 
+
 export function makeUpper(changetext) {
 	const start = [...changetext];
 	const changeOnce = start[0].toUpperCase();
@@ -11,49 +15,49 @@ export function manyElement(target) {
 	return document.body.querySelectorAll(target);
 }
 export async function getHeaderData() {
-	const action = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const head = await action.json();
+	const action = await fetch(locationLink);
+	const head = await data(action);
 	const icons = head.Header;
 	return icons;
 }
 export async function textHeader() {
-	const main = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const firstNave = await main.json();
+	const main = await fetch(locationLink);
+	const firstNave = await data(main);
 	return [firstNave.centerNavigation, firstNave.newCenterNavigation];
 }
 export async function subNavData() {
-	const makeSome = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const start = await makeSome.json();
+	const makeSome = await fetch(locationLink);
+	const start = await data(makeSome);
 	return start.subHeader;
 }
 export async function lotData() {
-	const pount = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const usePoint = await pount.json();
+	const pount = await fetch(locationLink);
+	const usePoint = await data(pount);
 	return usePoint.infinite;
 }
 export async function mobileSize() {
-	const m = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const mob = await m.json();
+	const m = await fetch(locationLink);
+	const mob = await data(m);
 	return mob.mobileData;
 }
 export async function searchTitle() {
-	const data = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const get = await data.json();
+	const datas = await fetch(locationLink);
+	const get = await data(datas);
 	return get.newNavigation.parentNewNav;
 }
 export async function datesStack() {
-	const mainData = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const use = await mainData.json();
+	const mainData = await fetch(locationLink);
+	const use = await data(mainData);
 	return use.dates;
 }
 export async function searchContent() {
-	const data = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/Place.json");
-	const get = await data.json();
+	const d = await fetch(locationLink);
+	const get = await data(d);
 	return get.newNavigation.childNewNav;
 }
 export async function Languages() {
-	const leng = await fetch("https://github.com/kenUltra/airbnb-project/blob/main/public/Data/Place.json/language.json");
-	const use = await leng.json();
+	const leng = await fetch(languageLink);
+	const use = await data(leng);
 	return use.language;
 }
 export function stringMonth(addOne = 0) {
